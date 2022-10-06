@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
-    case "mit":
+    case "MIT":
       return `[![License: MIT](https://img.sheilds.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
 
     case "Apache":
@@ -18,30 +18,41 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) { 
+  if (license !== "none") {
+    return ` * [License](#license)`
+  }
+  return ""
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {
+  if (license !== "none") {
+    return `  ## License
+    ${license}`
+  }
+  return ""
+}
 
 // TODO: Create a function to generate markdown for README
-function generateREADME(data) {
+function generateREADME(answers) {
   return `
   # ${answers.title}
-
+${renderLicenseBadge(answers.license)}
   ## Table of Content
-    -[Project description] (#description)
-    -[Usage] (#usage)
-    -[Contributing] (#contributing)
-    -[Installation] (#questions)
-    -[Questions] (#questions)
-    -[License] (#License)
+  * [Project description](#description)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Installation](#questions)
+  * [Questions](#questions)
+  ${renderLicenseLink(answers.license)}
 
   ## Description 
-  ${answer.description}
+  ${answers.description}
 
   ## Usage
-  ${answer.usage}
+  ${answers.usage}
 
   ## Installation
   ${answers.installation}
@@ -53,12 +64,11 @@ function generateREADME(data) {
   ${answers.email}
   ${answers.github}
 
-  ## License
-  ${answers.license}
+  ${renderLicenseSection(answers.license)}
 
 
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateREADME;
 

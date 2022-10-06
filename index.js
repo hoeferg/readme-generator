@@ -9,7 +9,7 @@ const markDown = require('./generateMarkdown')
 // ##
 
 // TODO: Create an array of questions for user input
-const questions = [];
+// const questions = [];
 inquirer
     .prompt([
         {
@@ -53,25 +53,26 @@ inquirer
             message: 'Who worked on the project with you?',
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'license',
             message: 'Do you have a license',
+            choices: ["MIT", "Apache", "Mozilla", "none"]
         },
     ])
     // TODO: Create a function to write README file
     // function writeToFile(readme, generateREADME(answers)) { }
     .then((answers) => {
-        const markdownPageContent = generateMarkdown(answers);
+        const markdownPageContent = markDown(answers);
 
         fs.writeFile('README.md', markdownPageContent, (err) =>
             err ? console.log(err) : console.log('Successfully created readme!')
         );
     });
 // TODO: Create a function to initialize app
-function init() { }
+
 
 // Function call to initialize app
-init();
+
 
 /* create a readme with the following
 Description
