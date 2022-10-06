@@ -1,10 +1,22 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const markDown = require('./generateMarkdown')
+
+// const generateREADME = ({ description, installation, usage, issues, contributions, questions, credits, licenses }) =>
+// # $(question.title)
+
+// ##
+
 // TODO: Create an array of questions for user input
 const questions = [];
 inquirer
     .prompt([
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of the project?',
+        },
         {
             type: 'input',
             name: 'description',
@@ -23,22 +35,38 @@ inquirer
         {
             type: 'input',
             name: 'issues',
-            message: 'Are there any issues',
+            message: 'Are there any know issues? List them here',
         },
         {
             type: 'input',
             name: 'contributions',
-            message: '',
+            message: 'If you would like to contribute heres how:',
         },
         {
             type: 'input',
-            name: 'linkedin',
-            message: 'Enter your LinkedIn URL.',
+            name: 'questions',
+            message: 'If there are any question, who should they contact?',
+        },
+        {
+            type: 'input',
+            name: 'credits',
+            message: 'Who worked on the project with you?',
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Do you have a license',
         },
     ])
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+    // TODO: Create a function to write README file
+    // function writeToFile(readme, generateREADME(answers)) { }
+    .then((answers) => {
+        const markdownPageContent = generateMarkdown(answers);
 
+        fs.writeFile('README.md', markdownPageContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created readme!')
+        );
+    });
 // TODO: Create a function to initialize app
 function init() { }
 
@@ -51,6 +79,17 @@ Installation
 Usage
 Report issues
 Contribution&mdash
+Test
+questions
 Credits
 License
 */
+
+// TODO: add yes and no option for license,
+// TODO: add checkbox to license
+// TODO: create readme file layout
+// TODO: add a badge for the lisens
+// TODO: need to add discription of licens if chosen
+// TODO: add section for github username and connect it to github profile
+// TODO: add email section to be put in the additional questions
+// TODO: when I click on the links in table of contents it takes you to other parts
