@@ -52,7 +52,7 @@ function renderLicenseSection(license) {
 function generateREADME(answers) {
   return `
 # ${answers.title}
-  ${renderLicenseBadge(answers.license)}
+${renderLicenseBadge(answers.license)}
 ## Table of Content
   * [Description](#description)
   * [Usage](#usage)
@@ -77,28 +77,28 @@ ${answers.usage}
 ${answers.issue}
 
 ## Contribution
-  ${answers.contribution}
+${answers.contribution}
 
 ## Test
-  ${answers.test}
+${answers.test}
 
 ## User Story
-  ${answers.userStory}
+${answers.userStory}
 
 ## Installation
-  ${answers.installation}
+${answers.installation}
 
 ## Technology Used
-  ${answers.technologiesUsed}
+${answers.technologiesUsed}
 
 ## Questions
-  If you have any questions, how to contribute or additional feedback, please contact our GitHub Repository and we will get back to you as soon as possible.
+If you have any questions, how to contribute or additional feedback, please contact our GitHub Repository and we will get back to you as soon as possible.
 
-  Contact Info: 
-  GitHub: [${answers.github}](https://github.com/${answers.github})
+Contact Info: 
+GitHub: [${answers.github}](https://github.com/${answers.github})
   
 ## Credits
-  ${answers.credits}
+${answers.credits}
 
 ${renderLicenseSection(answers.license)}
 `;

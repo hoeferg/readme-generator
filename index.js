@@ -88,29 +88,6 @@ inquirer
             err ? console.log(err) : console.log('Successfully created readme!')
         );
     });
-// TODO: Create a function to initialize app
 
 
-// Function call to initialize app
 
-
-/* create a readme with the following
-Description
-Installation
-Usage
-Report issues
-Contribution&mdash
-Test
-questions
-Credits
-License
-*/
-
-// TODO: add yes and no option for license,
-// TODO: add checkbox to license
-// TODO: create readme file layout
-// TODO: add a badge for the lisens
-// TODO: need to add discription of licens if chosen
-// TODO: add section for github username and connect it to github profile
-// TODO: add email section to be put in the additional questions
-// TODO: when I click on the links in table of contents it takes you to other parts
