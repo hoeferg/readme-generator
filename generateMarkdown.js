@@ -34,7 +34,7 @@ function renderLicenseLink(license) {
   
     }
   }
-
+}
 
 
 // TODO: Create a function that returns the license section of README
@@ -97,7 +97,7 @@ function generateREADME(answers) {
 
   ${renderLicenseSection(answers.license)}
 
-
+  If you have any questions, how to contribute or additional feedback, please contact our GitHub Repository and we will get back to you as soon as possible.
 `;
 }
 
