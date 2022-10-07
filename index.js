@@ -59,13 +59,13 @@ inquirer
         },
         {
             type: 'input',
-            name: 'questions',
-            message: 'What is your email? What is your github userName?',
+            name: 'email',
+            message: 'What is your email?'
         },
         {
             type: 'input',
-            name: 'questions',
-            message: 'What is your github link?',
+            name: 'github',
+            message: 'What is your github username?',
         },
         {
             type: 'input',

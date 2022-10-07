@@ -18,20 +18,20 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { 
+function renderLicenseLink(license) {
   if (license !== "none") {
     switch (license) {
       case "MIT":
         return `[![License: MIT](https://opensource.org/licenses/MIT)`;
-  
+
       case "Apache":
-        return `[![License](https://opensource.org/licenses/Apache-2.0)`;
-  
+        return `[![License: Apache](https://opensource.org/licenses/Apache-2.0)`;
+
       case "Mozilla":
         return `[![License: MPL 2.0](https://opensource.org/licenses/MPL-2.0)`;
       case "none":
         return `N/A`;
-  
+
     }
   }
 }
@@ -41,21 +41,22 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== "none") {
-    return `  ## License
-    ${license}`
+    return ` ## License
+    
+    This project is license under the ${license} license.`
   }
   return ""
 }
-
+// ${renderLicenseLink(answers.license)}
 // TODO: Create a function to generate markdown for README
 function generateREADME(answers) {
   return `
-  # ${answers.title}
+# ${answers.title}
   ${renderLicenseBadge(answers.license)}
-  ## Table of Content
-  * [Project description](#description)
+## Table of Content
+  * [Description](#description)
   * [Usage](#usage)
-  * [Report Issues](#issue)
+  * [Issue](#issue)
   * [Contribution](#contribution)
   * [Test](#test)
   * [User Story](#userStory)
@@ -63,41 +64,43 @@ function generateREADME(answers) {
   * [Technology Used](#technologiesUsed)
   * [Questions](#questions)
   * [Credits](#credits)
-  ${renderLicenseLink(answers.license)}
+  * [License](#license)
 
-  ## Description 
-  ${answers.description}
 
-  ## Usage
-  ${answers.usage}
+## Description 
+${answers.description}
 
-  ## Issue
-  ${answers.issue}
+## Usage
+${answers.usage}
 
-  ## Contribution
+## Issue
+${answers.issue}
+
+## Contribution
   ${answers.contribution}
 
-  ## Test
+## Test
   ${answers.test}
 
-  ## User Story
+## User Story
   ${answers.userStory}
 
-  ## Installation
+## Installation
   ${answers.installation}
 
-  ## Technology Used
+## Technology Used
   ${answers.technologiesUsed}
 
-  ## Questions
-  ${answers.questions}
+## Questions
+  If you have any questions, how to contribute or additional feedback, please contact our GitHub Repository and we will get back to you as soon as possible.
 
-  ## Credits
+  Contact Info: 
+  GitHub: [${answers.github}](https://github.com/${answers.github})
+  
+## Credits
   ${answers.credits}
 
-  ${renderLicenseSection(answers.license)}
-
-  If you have any questions, how to contribute or additional feedback, please contact our GitHub Repository and we will get back to you as soon as possible.
+${renderLicenseSection(answers.license)}
 `;
 }
 
