@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
       return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`;
 
     case "Apache":
-      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
+      return `[![License: Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
 
     case "Mozilla":
       return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`;
