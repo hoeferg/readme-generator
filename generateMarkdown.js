@@ -72,7 +72,7 @@ function generateREADME(answers) {
   ${answers.usage}
 
   ## Issue
-  ${answers.issues}
+  ${answers.issue}
 
   ## Contribution
   ${answers.contribution}
@@ -89,11 +89,11 @@ function generateREADME(answers) {
   ## Technology Used
   ${answers.technologiesUsed}
 
-  ## Contributions
-  ${answers.contribution}
-
   ## Questions
   ${answers.questions}
+
+  ## Credits
+  ${answers.credits}
 
   ${renderLicenseSection(answers.license)}
 
