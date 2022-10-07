@@ -18,6 +18,8 @@
 ## Description 
 Generate README is an application created to make README's in an easy to use way. The Generate README will prompt the user with several questions to answer and then generate a professional readme. From the creation of this application, the creater was able to imploy the use of npm in git bash and learned about switch case. 
 
+[!Video]("https://drive.google.com/file/d/1uZfJs_0hPHg2JtGYqldrYgQ5ygfCBcj6/view?usp=sharing")
+
 ## Usage
 In order to use Generate README the user must first download the inquierer npm package. From there they need to download the code to gain access to the questions. From there the user needs to open their git bash and run node index.js. From there, the user will be prompted to answer several question. When all the questions are submitted, a new readme will be created in the file of the location where the git bash folder is.
 
