@@ -24,28 +24,48 @@ inquirer
         },
         {
             type: 'input',
-            name: 'installation',
-            message: 'How do you install the app?',
-        },
-        {
-            type: 'input',
             name: 'usage',
-            message: 'How do you use the app?',
+            message: 'How do you use your application?',
         },
         {
             type: 'input',
-            name: 'issues',
-            message: 'Are there any know issues? List them here',
+            name: 'issue',
+            message: 'Where can people contact you if there is an issue?',
         },
         {
             type: 'input',
-            name: 'contributions',
-            message: 'If you would like to contribute heres how:',
+            name: 'contribution',
+            message: 'What do people need to know about to contribute to the project?',
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: 'How can you test your application?',
+        },
+        {
+            type: 'input',
+            name: 'userStory',
+            message: 'What is your user-story?',
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'How do you install the application?',
+        },
+        {
+            type: 'input',
+            name: 'technologiesUsed',
+            message: 'What technologies did you use in your project?',
         },
         {
             type: 'input',
             name: 'questions',
-            message: 'If there are any question, who should they contact?',
+            message: 'What is your email? What is your github userName?',
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'What is your github link?',
         },
         {
             type: 'input',

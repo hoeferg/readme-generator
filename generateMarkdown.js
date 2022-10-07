@@ -3,13 +3,13 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
-      return `[![License: MIT](https://img.sheilds.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
 
     case "Apache":
-      return `[![License](https://img.sheilds.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
 
     case "Mozilla":
-      return `[![License](https://img.sheilds.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+      return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
     case "none":
       return ``;
 
@@ -43,9 +43,14 @@ ${renderLicenseBadge(answers.license)}
   ## Table of Content
   * [Project description](#description)
   * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [Installation](#questions)
+  * [Report Issues](#issue)
+  * [Contribution](#contribution)
+  * [Test](#test)
+  * [User Story](#userStory)
+  * [Installation](#installation)
+  * [Technology Used](#technologiesUsed)
   * [Questions](#questions)
+  * [Credits](#credits)
   ${renderLicenseLink(answers.license)}
 
   ## Description 
@@ -54,15 +59,29 @@ ${renderLicenseBadge(answers.license)}
   ## Usage
   ${answers.usage}
 
+  ## Issue
+  ${answers.issues}
+
+  ## Contribution
+  ${answers.contribution}
+
+  ## Test
+  ${answers.test}
+
+  ## User Story
+  ${answers.userStory}
+
   ## Installation
   ${answers.installation}
 
-  ## Contributing
-  ${answers.contributing}
+  ## Technology Used
+  ${answers.technologiesUsed}
+
+  ## Contributions
+  ${answers.contribution}
 
   ## Questions
-  ${answers.email}
-  ${answers.github}
+  ${answers.questions}
 
   ${renderLicenseSection(answers.license)}
 
