@@ -12,7 +12,6 @@ function renderLicenseBadge(license) {
       return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`;
     case "none":
       return `N/A`;
-
   }
 }
 
@@ -59,9 +58,9 @@ ${renderLicenseBadge(answers.license)}
   * [Issue](#issue)
   * [Contribution](#contribution)
   * [Test](#test)
-  * [User Story](#userStory)
+  * [User Story](#user-story)
   * [Installation](#installation)
-  * [Technology Used](#technologiesUsed)
+  * [Technology Used](#technology-used)
   * [Questions](#questions)
   * [Credits](#credits)
   * [License](#license)
