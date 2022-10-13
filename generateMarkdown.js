@@ -1,3 +1,4 @@
+// Links to the License Badge
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
@@ -13,7 +14,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-
+// Links to the license link
 function renderLicenseLink(license) {
   if (license !== "none") {
     switch (license) {
@@ -32,7 +33,7 @@ function renderLicenseLink(license) {
   }
 }
 
-
+// show the license when there is a license
 function renderLicenseSection(license) {
   if (license !== "none") {
     return ` ## License
@@ -41,7 +42,7 @@ function renderLicenseSection(license) {
   }
   return ""
 }
-
+// is the markup for the readme
 function generateREADME(answers) {
   return `
 # ${answers.title}

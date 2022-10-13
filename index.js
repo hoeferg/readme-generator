@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const markDown = require('./generateMarkdown')
+// Links to the other files in the program
 
-
+// Is the set of questions for the user
 inquirer
     .prompt([
         {
@@ -81,5 +82,5 @@ inquirer
         );
     });
 
-
+// pushes the answer to the readme file and then writes that file
 
