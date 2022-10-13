@@ -1,15 +1,8 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const markDown = require('./generateMarkdown')
 
-// const generateREADME = ({ description, installation, usage, issues, contributions, questions, credits, licenses }) =>
-// # $(question.title)
 
-// ##
-
-// TODO: Create an array of questions for user input
-// const questions = [];
 inquirer
     .prompt([
         {
@@ -79,8 +72,7 @@ inquirer
             choices: ["MIT", "Apache", "Mozilla", "none"]
         },
     ])
-    // TODO: Create a function to write README file
-    // function writeToFile(readme, generateREADME(answers)) { }
+
     .then((answers) => {
         const markdownPageContent = markDown(answers);
 
